@@ -1,0 +1,5 @@
+node_modules
+/dev/
+/dist/
+/cardinal/
+/themes/clear-sky-theme

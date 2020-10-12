@@ -1,0 +1,77 @@
+:host {
+  scroll-behavior: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  display: block;
+  color: #000;
+}
+
+.conversation-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  :host,
+  .conversation-container {
+    height: calc(100vh - 70px);
+  }
+}
+
+.console-container {
+  flex: 1 1 auto;
+  overflow: auto;
+  margin: 5px;
+  border: 2px solid #4c71de;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.option-buttons-container {
+  min-height: 50px;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  .option-buttons-container {
+    /* justify-content: space-around; */
+    margin: auto 10px;
+  }
+}
+
+.footer {
+  min-height: 50px;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+psk-button button.btn.btn-primary {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 0;
+}
+
+psk-button .icon {
+  margin: 0;
+  padding: 0;
+}
+
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.options-wrapper psk-button {
+  margin: 4px;
+}

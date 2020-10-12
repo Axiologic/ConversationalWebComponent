@@ -1,0 +1,99 @@
+{
+  "text": "Choose option",
+  "options": [
+    {
+      "title": "Status",
+      "text": "Chose Coin",
+      "options": [
+        {
+          "title": "Eth",
+          "data": "eth"
+        },
+        {
+          "title": "BTC",
+          "data": "btc"
+        },
+        {
+          "title": "TRX",
+          "data": "trx"
+        },
+        {
+          "title": "Eth2",
+          "data": "eth"
+        },
+        {
+          "title": "BTC2",
+          "data": "btc"
+        },
+        {
+          "title": "TRX2",
+          "data": "trx"
+        },
+        {
+          "title": "Eth3",
+          "data": "eth"
+        },
+        {
+          "title": "BTC3",
+          "data": "btc"
+        },
+        {
+          "title": "TRX3",
+          "data": "trx"
+        },
+        {
+          "title": "Eth4",
+          "data": "eth"
+        },
+        {
+          "title": "BTC4",
+          "data": "btc"
+        },
+        {
+          "title": "TRX4",
+          "data": "trx"
+        },
+        {
+          "title": "Eth5",
+          "data": "eth"
+        },
+        {
+          "title": "BTC5",
+          "data": "btc"
+        },
+        {
+          "title": "TRX5",
+          "data": "trx"
+        }
+      ],
+      "commonOptions": {
+        "text": "Choose option",
+        "options": [
+          {
+            "title": "Month",
+            "data": "month"
+          },
+          {
+            "title": "Week",
+            "data": "week"
+          },
+          {
+            "title": "Day",
+            "data": "day"
+          }
+        ],
+        "commonOptions": {
+          "runScript": "conversation/status/index.js"
+        }
+      }
+    },
+    {
+      "title": "Insights",
+      "runScript": "conversation/insights/index.js"
+    },
+    {
+      "title": "Help",
+      "runScript": "conversation/help/index.js"
+    }
+  ]
+}

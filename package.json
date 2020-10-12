@@ -1,0 +1,58 @@
+{
+  "name": "cardinal-app-template",
+  "version": "1.0.0",
+  "description": "Cardinal application template",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "watch": {
+    "build-cardinal": {
+      "patterns": [
+        "dev/cardinal/src"
+      ],
+      "extensions": "tsx,css",
+      "quiet": false
+    },
+    "build-components": {
+      "patterns": [
+        "src/components"
+      ],
+      "extensions": "tsx,css",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/octopus/scripts/run && npm run build",
+    "build-cardinal": "node ./node_modules/octopus/scripts/run build-cardinal",
+    "build-theme": "node ./node_modules/octopus/scripts/run build-theme",
+    "build-components": "stencil build --dev",
+    "build": "npm run build-cardinal && npm run build-theme && npm run build-components",
+    "web": "ws --spa ./index.html",
+    "watch-cardinal": "npm-watch build-cardinal",
+    "watch-components": "npm-watch build-components",
+    "deploy": "surge --domain psk-conversation.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrivateSky/cardinal-app-template.git"
+  },
+  "dependencies": {
+    "@stencil/core": "^1.17.3",
+    "local-web-server": "^3.0.7",
+    "octopus": "git+https://github.com/PrivateSky/octopus.git#1.0.4"
+  },
+  "keywords": [
+    "cardinal"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PrivateSky/cardinal-app-template/issues"
+  },
+  "homepage": "https://github.com/PrivateSky/cardinal-app-template#readme",
+  "devDependencies": {
+    "npm-watch": "0.7.0"
+  }
+}
