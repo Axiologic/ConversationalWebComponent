@@ -32,7 +32,8 @@
     "web": "ws --spa ./index.html",
     "watch-cardinal": "npm-watch build-cardinal",
     "watch-components": "npm-watch build-components",
-    "deploy": "surge --domain psk-conversation.surge.sh"
+    "deploy": "surge --domain psk-conversation.surge.sh",
+    "build-dossier": "node ./bin/build_dossier.js"
   },
   "repository": {
     "type": "git",
