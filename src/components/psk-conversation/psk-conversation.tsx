@@ -9,7 +9,7 @@ import {
   PskConversationConfigOption,
   PskConversationContext,
 } from "./models";
-import { getBasePath, fetchJson, getOffsetWidthOfHiddenElement } from "./utils";
+import { getBasePath, fetchJson } from "./utils";
 import { PskConversationHandler } from "./psk-conversation-handler";
 import PskFragment from "./psk-fragment";
 import { HTMLStencilElement } from "@stencil/core/internal";
@@ -72,7 +72,7 @@ export class PskConversation {
           onOptionSelected: (option: PskConversationConfigOption) => {
             this.appendConsoleContentText(`Executing ${option.title} command...`);
           },
-          onOptionScriptExecuted: (error: any, data: any, option: PskConversationConfigOption) => {
+          onOptionScriptExecuted: (error: any, _data: any, option: PskConversationConfigOption) => {
             if (error) {
               this.appendConsoleContent(
                 <div>
@@ -90,7 +90,7 @@ export class PskConversation {
               </div>
             );
           },
-          onLog: (data, model, option: PskConversationConfigOption) => {
+          onLog: (data, model, _option: PskConversationConfigOption) => {
             this.appendConsoleContent(data, model);
           },
         });
@@ -317,7 +317,7 @@ export class PskConversation {
       (element) => element.nodeName === "PSK-BUTTON"
     ) as HTMLElement[];
 
-    const seeMoreButton = optionButtons.pop();
+    optionButtons.pop();
 
     // let availableWidth = clientWidth - getOffsetWidthOfHiddenElement(seeMoreButton);
     let availableWidth = clientWidth - 35;
@@ -353,11 +353,11 @@ export class PskConversation {
     this.appendConsoleContent(<psk-label label={contentText}></psk-label>);
   }
 
-  private appendConsoleContentError(error) {
-    this.appendConsoleContent({
-      content: this.getErrorContent(error),
-    });
-  }
+  // private appendConsoleContentError(error) {
+  //   this.appendConsoleContent({
+  //     content: this.getErrorContent(error),
+  //   });
+  // }
 
   private getErrorContent(error) {
     let errorContent = error;

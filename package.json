@@ -27,7 +27,7 @@
     "postinstall": "node ./node_modules/octopus/scripts/run && npm run build",
     "build-cardinal": "node ./node_modules/octopus/scripts/run build-cardinal",
     "build-theme": "node ./node_modules/octopus/scripts/run build-theme",
-    "build-components": "stencil build --dev",
+    "build-components": "stencil build",
     "build": "npm run build-cardinal && npm run build-theme && npm run build-components",
     "web": "ws --spa ./index.html",
     "watch-cardinal": "npm-watch build-cardinal",
