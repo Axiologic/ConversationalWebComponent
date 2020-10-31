@@ -7,17 +7,11 @@
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
   "types": "./dist/types/index.d.ts",
+  "collection": " ./dist/collection/collection-manifest.json",
   "watch": {
-    "build-cardinal": {
-      "patterns": [
-        "dev/cardinal/src"
-      ],
-      "extensions": "tsx,css",
-      "quiet": false
-    },
     "build-components": {
       "patterns": [
-        "src/components"
+        "src"
       ],
       "extensions": "tsx,css",
       "quiet": false
@@ -27,10 +21,9 @@
     "postinstall": "node ./node_modules/octopus/scripts/run && npm run build",
     "build-cardinal": "node ./node_modules/octopus/scripts/run build-cardinal",
     "build-theme": "node ./node_modules/octopus/scripts/run build-theme",
-    "build-components": "stencil build --dev",
+    "build-components": "stencil build --prod",
     "build": "npm run build-cardinal && npm run build-theme && npm run build-components",
     "web": "ws --spa ./index.html",
-    "watch-cardinal": "npm-watch build-cardinal",
     "watch-components": "npm-watch build-components",
     "deploy": "surge --domain psk-conversation.surge.sh"
   },

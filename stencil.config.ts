@@ -6,7 +6,7 @@ export interface CustomComponentsConfig extends Config {
 }
 
 export const config: CustomComponentsConfig = {
-  namespace: "custom-components",
+  namespace: "conversational-web-component",
   plugins: [global.removeWarnings()],
   outputTargets: [
     {

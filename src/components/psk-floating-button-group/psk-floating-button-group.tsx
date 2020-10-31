@@ -1,7 +1,7 @@
 import { Component, h, Prop, Element, Host } from "@stencil/core";
+import { CustomTheme, TableOfContentProperty } from "../../../dev/cardinal/src";
+
 import { FloatingButtonConfig } from "../../interfaces/FloatingButtonConfig";
-import CustomTheme from "../../../dev/cardinal/src/decorators/CustomTheme";
-import { TableOfContentProperty } from "../../../dev/cardinal/src/decorators/TableOfContentProperty";
 
 @Component({
   tag: "psk-floating-button-group",
@@ -53,7 +53,7 @@ export class PskFloatingButtonGroup {
     return (
       <Host
         onBlur={(event) => {
-          debugger
+          debugger;
           event.preventDefault();
           this.opened = !this.opened;
         }}

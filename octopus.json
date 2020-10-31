@@ -3,7 +3,7 @@
   "dependencies": [
     {
       "name": "cardinal",
-      "src": "https://github.com/privatesky/cardinal.git",
+      "src": "https://github.com/daniel-visoiu/cardinal.git",
       "actions": [
         {
           "type": "smartClone",
