@@ -21,11 +21,12 @@
     "postinstall": "node ./node_modules/octopus/scripts/run && npm run build",
     "build-cardinal": "node ./node_modules/octopus/scripts/run build-cardinal",
     "build-theme": "node ./node_modules/octopus/scripts/run build-theme",
-    "build-components": "stencil build --prod",
+    "build-components": "stencil build",
     "build": "npm run build-cardinal && npm run build-theme && npm run build-components",
     "web": "ws --spa ./index.html",
     "watch-components": "npm-watch build-components",
-    "deploy": "surge --domain psk-conversation.surge.sh"
+    "deploy": "surge --domain psk-conversation.surge.sh",
+    "build-dossier": "node ./bin/build_dossier.js"
   },
   "repository": {
     "type": "git",
